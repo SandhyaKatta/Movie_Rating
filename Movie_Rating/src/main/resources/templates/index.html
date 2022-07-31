@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+ <head>
+    
+    <title>Movie Details</title>
+
+
+</head>
+
+<body>
+
+    <div class="container my-2">
+        <h1>Movie Rating</h1>
+        table border=1 class=table table-striped table-responsive-md
+            <thead>
+                <tr>
+                    <th>Movie Id</th>
+                    <th>Movie title</th>
+                    <th>Movie year</th>
+                    <th>Movie ratings  </th>
+                <tr>
+            </thead>
+            <tbody>
+                <tr> th:each="movieservice : ${Movierating}">
+                    <td th:text="${movieservice.id}"</td>
+                    <td th:text="${movieservice.title}"</td>
+                    <td th:text="${movieservice.year}"</td>
+                    <td th:text="${movieservice.ratings}"</td>
+
+                </tr>
+            </tbody>
+        </table>
+
+</html>
